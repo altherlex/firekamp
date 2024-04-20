@@ -35,5 +35,7 @@ Integrate the API directly
 * [Customize controls (only paid version)](https://docs.avohq.io/3.0/customizable-controls.html)
 Remove edit, delete and create.
 
+* Write tests as the code evolves on itself.
+
 ---
 This project was created listening to Paul Simon and Susan Tedeschi the whole time.

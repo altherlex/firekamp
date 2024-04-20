@@ -39,7 +39,7 @@ class Avo::Resources::Book < Avo::BaseResource
   }
 
   def filters
-    filter Avo::Filters::PublishedFilter
+    filter Avo::Filters::Favorite
   end  
 
   def fields

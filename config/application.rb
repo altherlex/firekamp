@@ -21,6 +21,7 @@ module Firekamp
     # config.api_only = true
     # config.middleware.use ::ActionDispatch::Flash    
 
+    # TODO: Intagrate directly to the API through the Model
     config.after_initialize do
       response = HTTParty.get('https://potterapi-fedeperin.vercel.app/en/books')
       json_all = JSON.parse(response.body)

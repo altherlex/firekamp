@@ -46,6 +46,9 @@ Avo.configure do |config|
   ## == Resource options ==
   # config.resource_controls_placement = :right
   # config.model_resource_mapping = {}
+  config.model_resource_mapping = {
+    'Book': 'Avo::Resources::Book'
+  }  
   # config.default_view_type = :table
   # config.per_page = 24
   # config.per_page_steps = [12, 24, 48, 72]
@@ -115,20 +118,32 @@ Avo.configure do |config|
   #   add_breadcrumb "Home", '/avo'
   # end
 
-  ## == Menus ==
   # config.main_menu = -> {
-  #   section "Dashboards", icon: "dashboards" do
-  #     all_dashboards
-  #   end
-
   #   section "Resources", icon: "resources" do
   #     all_resources
   #   end
 
-  #   section "Tools", icon: "tools" do
-  #     all_tools
+  #   section I18n.t('avo.other'), icon: "heroicons/outline/finger-print", collapsable: true, collapsed: true do
+  #     link_to 'Avo HQ', path: 'https://avohq.io', target: :_blank
+  #     link_to 'Jumpstart Rails', path: 'https://jumpstartrails.com/', target: :_blank
   #   end
   # }
+  
+  ## == Menus ==
+  # config.main_menu = -> {
+    # section "Dashboards", icon: "dashboards" do
+    #   all_dashboards
+    # end
+
+    # section "Resources", icon: "resources" do
+    #   all_resources
+    # end
+
+    # section "Tools", icon: "tools" do
+    #   all_tools
+    # end
+  # }
+
   # config.profile_menu = -> {
   #   link "Profile", path: "/avo/profile", icon: "user-circle"
   # }

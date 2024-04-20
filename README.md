@@ -1,24 +1,23 @@
-# README
+# FireKamp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API: https://potterapi-fedeperin.vercel.app/en
 
-Things you may want to cover:
+## Versions:
 
-* Ruby version
+```ruby
+ruby 3.0.3
+gem 'rails', '~> 6.1.7', '>= 6.1.7.7'
+gem 'avo', '>= 3.2'
+gem 'sqlite3', '~> 1.4'
+```
 
-* System dependencies
+## Comands used:
 
-* Configuration
+```shell
+bin/rails generate model book number:integer pages:integer index:integer title:string originalTitle:string releaseDate:string description:string cover:string
+```
 
-* Database creation
+## TODO:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [REST API integration](https://docs.avohq.io/2.0/recipes/rest-api-integration)
+* [Customize controls (only paid version)](https://docs.avohq.io/3.0/customizable-controls.html)

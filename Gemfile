@@ -57,3 +57,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   
 gem 'sprockets'
 gem 'avo', '>= 3.2'
+gem 'httparty'
+gem 'ransack'
+gem 'pundit'

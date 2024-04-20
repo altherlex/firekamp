@@ -18,7 +18,16 @@ module Firekamp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.api_only = true
-    config.middleware.use ::ActionDispatch::Flash    
+    # config.api_only = true
+    # config.middleware.use ::ActionDispatch::Flash    
+
+    config.after_initialize do
+      response = HTTParty.get('https://potterapi-fedeperin.vercel.app/en/books')
+      json_all = JSON.parse(response.body)
+      json_all.map do |json_item|
+        Book.find_or_create_by(json_item)
+      end
+    end
+
   end
 end
